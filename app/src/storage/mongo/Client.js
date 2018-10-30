@@ -4,12 +4,12 @@ import debug from 'debug';
 const Debug = debug('app:storage:mongo');
 
 const DEFAULT_DB_HOST = 'storage';
-const STORAGE_DB_NAME = 'star_wars_movies';
+const DEFAULT_DB_NAME = 'star_wars_movies';
 const DEFAULT_DB_PORT = 27017;
 
 export class Client {
 	static get dbName() {
-		return process.env.STORAGE_DB_NAME || STORAGE_DB_NAME;
+		return process.env.STORAGE_DB_NAME || DEFAULT_DB_NAME;
 	}
 
 	static get host() {
@@ -97,7 +97,6 @@ export class Client {
 	static async deleteOneQuery(collectionName = '', { _id }) {
 		let queryResult;
 		try {
-			console.log(_id);
 			queryResult = await (await Client.getCollection(collectionName)).deleteOne({ _id: ObjectId(_id) });
 		} catch (e) {
 			Debug('MongoDb delete query failure:', e);

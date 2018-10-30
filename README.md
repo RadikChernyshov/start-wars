@@ -14,3 +14,9 @@ Star Wars test
 ### Local GraphQL Server 
 
     http://0.0.0.0:3000/graphql
+    
+### Future plans
+
+ - Add/Remove character from movie
+ - Add list characters in an selected movie
+ - Add list movies an character appears in
