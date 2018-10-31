@@ -8,4 +8,4 @@ const server = require('../server').default;
 
 const serverPort = process.env.BACKEND_SERVER_PORT || DEFAULT_BACKEND_PORT;
 
-server.listen({ port: serverPort }, () => debug(`Apollo Server is running on port: ${serverPort}`));
+server.listen({ port: serverPort }, () => debug(`Server is running on port: ${serverPort}`));

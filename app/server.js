@@ -1,10 +1,11 @@
 import express from 'express';
-import { ApolloServer } from 'apollo-server-express';
-import Client from './src/storage/graphql/Client';
+import graphqlHTTP from 'express-graphql';
+import GraphQLSchema from './src/storage/graphql/Schema';
 
 const server = express();
-const apolloServer = new ApolloServer({ schema: Client.schema });
-
-apolloServer.applyMiddleware({ app: server });
+server.use('/graphql', graphqlHTTP({
+	schema: GraphQLSchema,
+	graphiql: true
+}));
 
 export default server;
