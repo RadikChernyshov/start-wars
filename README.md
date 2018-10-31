@@ -20,3 +20,4 @@ Star Wars test
  - Add/Remove character from movie
  - Add list characters in an selected movie
  - Add list movies an character appears in
+ - Add health checks
