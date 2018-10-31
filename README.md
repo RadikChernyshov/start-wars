@@ -11,7 +11,7 @@ Star Wars test
  
      $ docker-compose up -d --build --force-recreate
      
-### Local GraphQL Server 
+### GraphQL UI Client ()
 
     http://0.0.0.0:3000/graphql
     
